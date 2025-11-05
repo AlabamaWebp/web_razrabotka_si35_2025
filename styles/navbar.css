@@ -1,0 +1,27 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+.navbar {
+  background-color: rgb(39, 39, 39);
+}
+.navbar > ul {
+  display: flex;
+  gap: 20px;
+  margin: 0;
+
+}
+.navbar > ul > li {
+  list-style: none;
+  display: contents;
+}
+.navbar__link {
+  color: white;
+  padding: 10px;
+  transition: 0.2s;
+  text-decoration: none;
+}
+.navbar__link:hover {
+  transform: rotate(720deg) scale(2);
+  background-color: red;
+}
