@@ -1,0 +1,21 @@
+body {
+    background-color: rgb(37, 37, 37);
+}
+h2 {
+    margin: 0;
+}
+.container {
+  display: flex;
+  gap: 20px;
+  justify-content: space-around;
+  color: white;
+}
+.container__column {
+  padding: 10px 20px;
+}
+.left-column {
+  background-color: #8c04a8;
+}
+.right-column {
+  background-color: #22287e;
+}
