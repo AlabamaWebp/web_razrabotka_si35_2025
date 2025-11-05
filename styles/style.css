@@ -1,0 +1,9 @@
+.ul-blue {
+  color: blue;
+}
+.big_font > li > span {
+  font-size: 25px;
+}
+body {
+    background-color: gray;
+}

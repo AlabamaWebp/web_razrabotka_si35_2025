@@ -1,0 +1,10 @@
+.product-card {
+  width: 250px;
+  padding: 20px;
+  border: 2px solid black;
+  margin: 10px auto;
+  box-sizing: 5px black;
+  -webkit-box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+  -moz-box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+  box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+}
