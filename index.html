@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="trash">
+      <div id="id1">
+        <div id="id2">
+          <div id="id3"></div>
+        </div>
+      </div>
+    </div>
+    <script>
+      function createTrash() {
+        for (let i = 0; i < 100; i++) {
+          const el = document.createElement("div");
+          el.id = "trash" + i;
+          document.body.append(el);
+        }
+      }
+      function timeTest() {
+        const t1 = Date.now();
+        const a = document.getElementById("id3");
+        const result1 = Date.now() - t1;
+        const t2 = Date.now();
+        const b = document.querySelector("#id3");
+        const result2 = Date.now() - t2;
+        // console.log(
+        //   `
+        //     ${result1}мс document.getElementById("id3");
+        //     ${result2}мс document.querySelector("#id3");
+        //     `
+        // );
+        return [result1, result2];
+      }
+      function createTrashAsync() {
+        return new Promise((resolve, reject) => {
+          createTrash();
+          resolve();
+        });
+      }
+      function test() {
+        createTrashAsync();
+        const stat = [];
+        for (let i = 0; i < 10000000; i++) {
+          stat.push(timeTest());
+        }
+        let res1 = 0;
+        let res2 = 0;
+        stat.forEach((e) => {
+          if (e[0] > e[1]) {
+            res1++;
+          }
+          if (e[0] < e[1]) {
+            res2++;
+          }
+        });
+        console.log(
+          `getElementById querySelector
+      ${res1}   ${res2}`,
+          stat.filter((e) => e[0] || e[1])
+        );
+      }
+      test();
+    </script>
+  </body>
+</html>
