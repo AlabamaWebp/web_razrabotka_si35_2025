@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Кастомные формы</title>
+    <link rel="stylesheet" href="../normalize.css" />
+    <link rel="stylesheet" href="styles/custom-form.css" />
+  </head>
+  <body>
+    <div class="form-container">
+      <h1>Форма с кастомными элементами</h1>
+
+      <form>
+        <fieldset>
+          <legend>Информация о пользователе</legend>
+
+          <div class="form-group">
+            <label class="checkbox-label">
+              <input type="checkbox" name="subscribe" />
+              <span class="checkmark"></span>
+              Подписаться на рассылку
+            </label>
+          </div>
+
+          <div class="form-group">
+            <label class="checkbox-label">
+              <input type="checkbox" name="terms" />
+              <span class="checkmark"></span>
+              Согласен с условиями использования
+            </label>
+          </div>
+
+          <div class="form-group">
+            <label class="checkbox-label">
+              <input type="checkbox" name="newsletter" />
+              <span class="checkmark"></span>
+              Получать новостную рассылку
+            </label>
+          </div>
+
+          <div class="radio-group">
+            <p>Выберите тип аккаунта:</p>
+
+            <label class="radio-label">
+              <input
+                type="radio"
+                name="account_type"
+                value="personal"
+                checked
+              />
+              <span class="radio-mark"></span>
+              Личный
+            </label>
+
+            <label class="radio-label">
+              <input type="radio" name="account_type" value="business" />
+              <span class="radio-mark"></span>
+              Бизнес
+            </label>
+
+            <label class="radio-label">
+              <input type="radio" name="account_type" value="premium" />
+              <span class="radio-mark"></span>
+              Премиум
+            </label>
+          </div>
+
+          <div class="form-group">
+            <label class="checkbox-label">
+              <input type="checkbox" name="notifications" />
+              <span class="checkmark"></span>
+              Включить уведомления
+            </label>
+          </div>
+        </fieldset>
+      </form>
+    </div>
+  </body>
+</html>
