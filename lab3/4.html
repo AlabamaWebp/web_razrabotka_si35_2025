@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <span>Счётчик: 0</span>
+    <button>Увеличить</button>
+    <script>
+      let count = 0;
+      const span = document.querySelector("span");
+      const button = document.querySelector("button");
+      button.addEventListener("click", () => {
+        let t = span.textContent.split(": ")[0];
+        span.textContent = `${t}: ${++count}`;
+      });
+    </script>
+  </body>
+</html>
