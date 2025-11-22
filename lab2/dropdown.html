@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Выпадающее меню</title>
+    <link rel="stylesheet" href="styles/dropdown.css" />
+    <link rel="stylesheet" href="../normalize.css" />
+  </head>
+  <body>
+    <nav class="dropdown-nav">
+      <ul class="main-menu">
+        <li><a href="#">Главная</a></li>
+        <li class="has-dropdown">
+          <a href="#">Каталог</a>
+          <ul class="dropdown">
+            <li><a href="#">Электроника</a></li>
+            <li><a href="#">Одежда</a></li>
+            <li class="has-dropdown">
+              <a href="#">Техника</a>
+              <ul class="sub-dropdown">
+                <li><a href="#">Бытовая</a></li>
+                <li><a href="#">Компьютерная</a></li>
+                <li><a href="#">Климатическая</a></li>
+              </ul>
+            </li>
+            <li><a href="#">Книги</a></li>
+          </ul>
+        </li>
+        <li><a href="#">О нас</a></li>
+        <li class="has-dropdown">
+          <a href="#">Услуги</a>
+          <ul class="dropdown">
+            <li><a href="#">Доставка</a></li>
+            <li><a href="#">Установка</a></li>
+            <li><a href="#">Гарантия</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Контакты</a></li>
+      </ul>
+    </nav>
+  </body>
+</html>
