@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <ul id="ul"></ul>
+    <input type="text" id="text" />
+    <button>Добавить пункт</button>
+    <script>
+      const ul = document.querySelector("#ul");
+      const inp = document.querySelector("#text");
+      const button = document.querySelector("button");
+      button.addEventListener("click", () => {
+        if (!inp.value) {
+          alert("Пустое нельзя");
+          return;
+        }
+        const li = document.createElement("li");
+        li.textContent = inp.value;
+        ul.appendChild(li);
+        inp.value = "";
+      });
+    </script>
+  </body>
+</html>

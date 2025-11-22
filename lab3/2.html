@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .highlight {
+        background-color: yellow;
+        color: black;
+      }
+    </style>
+  </head>
+  <body>
+    <div>Нажми меня!</div>
+    <button>Переключить стиль</button>
+    <script>
+      const div = document.querySelector("div");
+      const button = document.querySelector("button");
+      button.addEventListener("click", () => {
+        div.classList.toggle("highlight")
+      })
+    </script>
+  </body>
+</html>
