@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Контактная форма</title>
+    <link rel="stylesheet" href="../lab1/styles/form.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Свяжитесь с нами</h1>
+      <form method="post" action="#">
+        <div class="form-group">
+          <label for="name">Имя:</label>
+          <input type="text" id="name" name="name" />
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" />
+        </div>
+
+        <div id="status"></div>
+
+        <button type="submit">Отправить</button>
+      </form>
+    </div>
+    <script>
+      const form = document.forms[0];
+      //   const text = document.querySelector("#text");
+      //   const email = document.querySelector("#email");
+      const status = document.querySelector("#status");
+      function checkErrorForm(i) {
+        return !form[i].value;
+      }
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        status.innerText = "";
+        status.classList.remove("ok");
+        status.classList.remove("error");
+        if (checkErrorForm(0)) status.innerText += "Поле имя не заполнено\n";
+        if (checkErrorForm(1)) status.innerText += "Поле email не заполнено";
+
+        status.classList.add(!status.innerText ? "ok" : "error");
+        if (!status.innerText) {
+          status.innerText = "Форма успешно отправлена (в консоль)";
+          console.log(new FormData(form));
+        }
+      });
+    </script>
+  </body>
+</html>
