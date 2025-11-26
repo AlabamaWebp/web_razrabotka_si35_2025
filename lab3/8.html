@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        width: 200px;
+        height: 100px;
+        background-color: lightblue;
+        transition: 0.2s ease-in-out;
+      }
+      .hidden {
+        opacity: 0;
+        pointer-events: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div></div>
+    <button>Переключить видимость</button>
+    <script>
+      const div = document.querySelector("div");
+      const button = document.querySelector("button");
+      button.addEventListener("click", (e) => {
+        div.classList.toggle("hidden");
+      });
+    </script>
+  </body>
+</html>
