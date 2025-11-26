@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .clicked {
+        background-color: gray;
+      }
+    </style>
+  </head>
+  <body>
+    <ul>
+      <li>Пункт</li>
+      <li>Пункт</li>
+    </ul>
+    <button>Добавить пункт</button>
+    <script>
+      const ul = document.querySelector("ul");
+      const button = document.querySelector("button");
+      button.addEventListener("click", () => {
+        const li = document.createElement("li");
+        li.innerText = "Пункт";
+        ul.appendChild(li);
+      });
+      ul.addEventListener("click", (e) => {
+        if (e.target.tagName === "LI") {
+          e.target.classList.add("clicked");
+          e.target.innerText += " Нажато!";
+        }
+      });
+    </script>
+  </body>
+</html>
