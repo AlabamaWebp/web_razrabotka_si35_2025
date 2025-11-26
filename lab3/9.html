@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      option {
+        color: attr(value);
+      }
+    </style>
+  </head>
+  <body>
+    <p>Измени мой цвет!</p>
+    <select style="border-left-color: #435590">
+      <option value="#000000">#000000</option>
+      <option value="#435590">#435590</option>
+      <option value="#ff0000">#ff0000</option>
+      <option value="#003cff">#003cff</option>
+    </select>
+    <script>
+      const p = document.querySelector("p");
+      const select = document.querySelector("select");
+      select.addEventListener("change", (e) => {
+        p.style.color = select.value;
+      });
+    </script>
+  </body>
+</html>
