@@ -20,9 +20,9 @@
         <button type="submit">Вычислить</button>
     </form>
     <?php
-    if (isset($_POST)) {
+    if (isset($_POST, $_POST["num1"], $_POST["num2"], $_POST["operation"])) {
         echo "<h1>Ответ: ";
-        // Я знаю что лабораторная про условия, от этого ещё слаще использование следующего трюка:
+        // Я знаю что лабораторная про условия, не сдержался
         $op = array(
             "add" => fn($num1, $num2) => $num1 + $num2,
             "subtract" => fn($num1, $num2) => $num1 - $num2,
