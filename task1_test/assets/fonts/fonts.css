@@ -1,0 +1,28 @@
+@font-face {
+  font-family: "noto-serif";
+  src: url("./noto-serif/NotoSerifRegular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "noto-serif";
+  src: url("./noto-serif/NotoSerifRegular.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "PTSR";
+  src: url("./pt-sans/PTSansRegular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "PTSR";
+  src: url("./pt-sans/PTSansRegular.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
