@@ -142,3 +142,20 @@ body {
     justify-content: center;
   }
 }
+
+.card[data-disabled="true"] {
+  transition: 0.5s;
+  filter: grayscale(2);
+}
+.card[data-disabled="true"]:hover {
+  filter: none;
+}
+.card[data-disabled="true"]::before {
+  opacity: 0;
+}
+.card[data-disabled="true"] .card__content {
+  border-color: #e4ded1;
+}
+.card[data-disabled="true"] .card__button::before {
+  content: "Подробнее";
+}
