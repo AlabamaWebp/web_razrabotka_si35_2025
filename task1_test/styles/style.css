@@ -30,6 +30,25 @@ body {
   color: #765b24;
   display: flex;
   flex-direction: column;
+  position: relative;
+}
+.card::before {
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+  content: "Лучшая цена";
+  color: white;
+  font-size: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-image: url(../assets/images/best-price.png);
+  background-size: cover;
+  width: 65px;
+  height: 65px;
+  position: absolute;
+  top: 5px;
+  left: 5px;
 }
 .card__img {
   width: 100%;
@@ -39,6 +58,7 @@ body {
 .card__content {
   flex: 1 1 100%;
   border: 5px solid #e4ded1;
+  transition: 0.2s ease-in-out;
   border-top: none;
   padding: 20px;
   display: flex;
@@ -58,7 +78,7 @@ body {
 }
 .card__line {
   margin: 20px 0;
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgba(0, 0, 0, 0.15);
   height: 1px;
   width: 100%;
 }
@@ -79,4 +99,11 @@ body {
   color: white;
   border: none;
   font-family: PTSR;
+  cursor: pointer;
+}
+.card__button:hover {
+  background-color: #9d8555;
+}
+.card:hover::before {
+  opacity: 1;
 }
